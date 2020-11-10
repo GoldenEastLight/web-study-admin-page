@@ -180,7 +180,7 @@ a.text-60s:hover, a.text-info:focus {
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="${root}/admin/tables">
           <i class="fas fa-fw fa-table"></i>
           <span>Tables</span></a>
       </li>

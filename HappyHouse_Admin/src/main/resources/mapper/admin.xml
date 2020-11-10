@@ -12,4 +12,31 @@
 		from 
 				members
 	</select>
+	<select id="selectHouseInfoLike" resultType="houseInfoLike">
+		SELECT 
+					d.member_id, 
+					d.house_no, 
+					d.reg_date , 
+					COUNT(*) AS "count", 
+					h.dong, 
+					h.aptname, 
+					h.code, 
+					h.buildyear, 
+					h.jibun, 
+					h.lat, 
+					h.lng, 
+					h.img
+			FROM (
+				SELECT 
+						member_id, 
+						house_no, 
+						reg_date
+				FROM houselike
+				WHERE reg_date >= DATE_ADD(now(), INTERVAL -3 MONTH)
+		) d INNER JOIN houseinfo h
+		ON d.house_no = h.no
+		GROUP BY house_no
+		ORDER BY COUNT(*) DESC
+		LIMIT 0,5
+	</select>
 </mapper>
