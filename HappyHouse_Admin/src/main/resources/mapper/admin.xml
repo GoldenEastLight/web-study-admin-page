@@ -12,4 +12,46 @@
 		from 
 				members
 	</select>
+	
+	<select id="visitCount10" resultType="int">
+		select
+				visit10s
+		  from
+		  		visit_count
+	</select>
+	
+	<select id="visitCount20" resultType="int">
+		select
+				visit20s
+		  from
+		  		visit_count
+	</select>
+	
+	<select id="visitCount30" resultType="int">
+		select
+				visit30s
+		  from
+		  		visit_count
+	</select>
+	
+	<select id="visitCount40" resultType="int">
+		select
+				visit40s
+		  from
+		  		visit_count
+	</select>
+	
+	<select id="visitCount50" resultType="int">
+		select
+				visit50s
+		  from
+		  		visit_count
+	</select>
+	
+	<select id="visitCount60" resultType="int">
+		select
+				visit60s
+		  from
+		  		visit_count
+	</select>
 </mapper>
