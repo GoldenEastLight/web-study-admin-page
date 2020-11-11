@@ -23,8 +23,6 @@ public class AdminController {
 		try {
 			List<Member> members = adminService.select();
 			model.addAttribute("members", members);
-			
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
