@@ -140,6 +140,6 @@ CREATE TABLE visit_count (
     visitf int
 );
 
-insert into visit_count values (5, 10, 15, 15, 30, 50, 800, 240);
+insert into visit_count values (5, 10, 15, 15, 30, 50, 213, 318);
 
 drop table visit_count;
