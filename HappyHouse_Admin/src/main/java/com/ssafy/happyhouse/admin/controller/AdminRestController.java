@@ -17,7 +17,7 @@ public class AdminRestController {
 	private AdminService adminService;
 
 	@GetMapping("/age")
-	public Map<String, Integer> adminForm() {
+	public Map<String, Integer> ageForm() {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		int visit10 = adminService.visit10s();
 		map.put("visit10", visit10);
@@ -31,6 +31,17 @@ public class AdminRestController {
 		map.put("visit50", visit50);
 		int visit60 = adminService.visit60s();
 		map.put("visit60", visit60);
+		
+		return map;
+	}
+
+	@GetMapping("/sex")
+	public Map<String, Integer> sexForm() {
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		int m = adminService.visitM();
+		map.put("m", m);
+		int f = adminService.visitF();
+		map.put("f", f);
 		
 		return map;
 	}

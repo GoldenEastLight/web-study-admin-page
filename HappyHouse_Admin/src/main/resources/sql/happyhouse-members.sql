@@ -135,5 +135,11 @@ CREATE TABLE visit_count (
     visit30s int,
     visit40s int,
     visit50s int,
-    visit60s int
+    visit60s int,
+    visitm int,
+    visitf int
 );
+
+insert into visit_count values (5, 10, 15, 15, 30, 50, 800, 240);
+
+drop table visit_count;

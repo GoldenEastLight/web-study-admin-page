@@ -83,4 +83,16 @@
 		from
 		visit_count
 	</select>
+	<select id="visitF" resultType="int">
+		select
+		visitf
+		from
+		visit_count
+	</select>
+	<select id="visitM" resultType="int">
+		select
+		visitm
+		from
+		visit_count
+	</select>
 </mapper>

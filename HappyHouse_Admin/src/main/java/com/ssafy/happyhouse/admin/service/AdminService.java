@@ -7,6 +7,7 @@ import com.ssafy.happyhouse.repository.dto.Member;
 
 public interface AdminService {
 	List<Member> select() throws Exception;
+
 	List<HouseInfoLike> selectHouseInfoLike() throws Exception;
 
 	int visit10s();
@@ -20,4 +21,8 @@ public interface AdminService {
 	int visit50s();
 
 	int visit60s();
+
+	int visitF();
+
+	int visitM();
 }

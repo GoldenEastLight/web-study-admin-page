@@ -54,4 +54,14 @@ public class AdminServiceImpl implements AdminService {
 		return adminMapper.visitCount60();
 	}
 
+	@Override
+	public int visitF() {
+		return adminMapper.visitF();
+	}
+
+	@Override
+	public int visitM() {
+		return adminMapper.visitM();
+	}
+
 }

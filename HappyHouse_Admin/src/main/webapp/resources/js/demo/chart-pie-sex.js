@@ -8,18 +8,19 @@ Chart.defaults.global.defaultFontColor = '#858796';
 
 $(document).ready(function() {
 	$.ajax({
-		url : "/happyhouse/visit/age",
+		url : "/happyhouse/visit/sex",
 		success : function(data) {
 			console.dir(data);
-			var ctx = document.getElementById("myPieChart");
+			var ctx = document.getElementById("myPieChartSex");
 			var myPieChart = new Chart(ctx, {
 				type: 'doughnut',
 				data: {
-					labels: ["10s", "20s", "30s", "40s", "50s", "60s"],
+					labels: ["male", "female"],
 					datasets: [{
-						data: [data.visit10, data.visit20, data.visit30, data.visit40, data.visit50, data.visit60],
-						backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#af7ac5', '#f8c471', '#f1948a'],
-						hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf', '#9b59b6', '#f5b041', '#ec7063'],
+//						data: [data.male, data.female],
+						data: [data.m, data.f],
+						backgroundColor: ['#4e73df', '#1cc88a'],
+						hoverBackgroundColor: ['#2e59d9', '#17a673'],
 						hoverBorderColor: "rgba(234, 236, 244, 1)",
 					}],
 				},

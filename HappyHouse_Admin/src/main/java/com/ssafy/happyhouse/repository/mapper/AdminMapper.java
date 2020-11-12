@@ -14,4 +14,6 @@ public interface AdminMapper {
 	int visitCount40();
 	int visitCount50();
 	int visitCount60();
+	int visitF();
+	int visitM();
 }
